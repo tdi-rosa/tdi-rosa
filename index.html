@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>tdi-rosa — timeline</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+  :root {
+    --ink: #111111;
+    --bg: #ffffff;
+    --muted: rgba(17, 17, 17, 0.55);
+    --desc: rgba(17, 17, 17, 0.65);
+  }
+  @media (prefers-color-scheme: dark) {
+    :root {
+      --ink: #e8e8e8;
+      --bg: #0d1117;
+      --muted: rgba(232, 232, 232, 0.55);
+      --desc: rgba(232, 232, 232, 0.65);
+    }
+  }
+  html, body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Helvetica, Arial, sans-serif;
+  }
+  .wrap {
+    max-width: 620px;
+    margin: 0 auto;
+    padding: 56px 24px;
+  }
+  svg {
+    width: 100%;
+    height: auto;
+    overflow: visible;
+  }
+  text { fill: var(--ink); }
+  .muted { fill: var(--muted); }
+  .desc { fill: var(--desc); }
+  .trunk { stroke: var(--ink); }
+  .dot { fill: var(--ink); }
+  .node-link { cursor: pointer; }
+  .bubble {
+    transition: transform 0.15s ease;
+    transform-box: fill-box;
+    transform-origin: center;
+  }
+  .node-link:hover .bubble { transform: scale(1.15); }
+  .node-link:hover .title { text-decoration: underline; }
+  .back {
+    display: block;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 13px;
+    color: var(--muted);
+    text-decoration: none;
+  }
+  .back:hover { color: var(--ink); }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<svg viewBox="0 0 480 640" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+  <path class="trunk" fill="none" stroke-width="1.5"
+        d="M 80 580 C 70 430, 120 330, 104 70" />
+
+  <!-- April 2026: started at 42 -->
+  <circle class="dot" cx="80" cy="560" r="5"/>
+  <text class="muted" x="96" y="557" font-size="10" letter-spacing="0.5">APRIL 2026</text>
+  <text x="96" y="573" font-size="14" font-weight="600">Started at 42 (Paris)</text>
+
+  <!-- June 2026: parlementclair -->
+  <path fill="none" stroke="var(--ink)" stroke-width="1.2" d="M 88 340 L 190 305"/>
+  <a class="node-link" xlink:href="https://github.com/tdi-rosa/parlementclair" target="_blank" rel="noopener">
+    <circle class="bubble dot" cx="190" cy="305" r="13"/>
+    <text class="muted" x="219" y="285" font-size="10" letter-spacing="0.5">JUNE 2026</text>
+    <text class="title" x="219" y="304" font-size="16" font-weight="700">parlementclair</text>
+    <text class="desc" x="219" y="320" font-size="11">AI legal chatbot for the French</text>
+    <text class="desc" x="219" y="336" font-size="11">National Assembly hackathon</text>
+  </a>
+
+  <!-- July 2026: epub-translator-vllm -->
+  <path fill="none" stroke="var(--ink)" stroke-width="1.2" d="M 102 115 L 206 80"/>
+  <a class="node-link" xlink:href="https://github.com/tdi-rosa/epub-translator-vllm" target="_blank" rel="noopener">
+    <circle class="bubble dot" cx="206" cy="80" r="13"/>
+    <text class="muted" x="235" y="60" font-size="10" letter-spacing="0.5">JULY 2026</text>
+    <text class="title" x="235" y="79" font-size="16" font-weight="700">epub-translator-vllm</text>
+    <text class="desc" x="235" y="95" font-size="11">Self-hosted EPUB translator</text>
+    <text class="desc" x="235" y="111" font-size="11">running Qwen3.5 on vLLM</text>
+  </a>
+</svg>
+
+<a class="back" href="https://github.com/tdi-rosa">&larr; back to profile</a>
+
+</div>
+</body>
+</html>
