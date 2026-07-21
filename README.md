@@ -1,4 +1,13 @@
 ```mermaid
+%%{init: {"theme": "base", "themeVariables": {
+    "primaryColor": "#ffffff",
+    "primaryTextColor": "#111111",
+    "primaryBorderColor": "#111111",
+    "lineColor": "#111111",
+    "secondaryColor": "#ffffff",
+    "tertiaryColor": "#ffffff",
+    "fontFamily": "Helvetica, Arial, sans-serif"
+}}}%%
 flowchart BT
     A(["Apr 2026 · Started at 42 (Paris)"])
     B(["Jun 2026 · parlementclair<br/><small>AI legal chatbot for the French National Assembly hackathon</small>"])
